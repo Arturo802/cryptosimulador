@@ -1,0 +1,11 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'cryptosimulador-backend-go'
+    static_configs:
+      - targets: ['host.docker.internal:8080'] # Apunta a tu backend en Go
+
+  - job_name: 'cryptosimulador-quant-python'
+    static_configs:
+      - targets: ['host.docker.internal:8000'] # Apunta a tu microservicio en Python

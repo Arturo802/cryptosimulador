@@ -1,0 +1,34 @@
+# Dependencias de Node (Frontend)
+frontend/node_modules/
+frontend/dist/
+
+# Entornos virtuales y caché de Python (Microservicio)
+python-bot/.venv/
+python-bot/__pycache__/
+python-bot/.pytest_cache/
+
+# Dependencias y ejecutables de Go (Backend)
+backend/vendor/
+backend/*.exe
+backend/*.test
+backend/*.out
+
+# Base de datos local de SQLite (si se generó localmente)
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos de entorno y configuración sensible (.env local)
+.env
+backend/.env
+frontend/.env
+
+# Directorios de compilación de Solidity / Hardhat (si aplica)
+artifacts/
+cache/
+node_modules/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+.vscode/ 

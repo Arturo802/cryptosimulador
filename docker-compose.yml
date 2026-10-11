@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: postgres-db
+    environment:
+      POSTGRES_DB: cryptodb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - cryptonet
+
+  # Prometheus para la recolección de métricas de rendimiento
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: cryptosimulador_prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - cryptonet
+
+  # Grafana para la visualización gráfica de métricas en tiempo real
+  grafana:
+    image: grafana/grafana:latest
+    container_name: cryptosimulador_grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    depends_on:
+      - prometheus
+    networks:
+      - cryptonet
+
+networks:
+  cryptonet:
+    driver: bridge
+
+volumes:
+  postgres_data:

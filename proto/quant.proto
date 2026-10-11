@@ -1,0 +1,24 @@
+syntax = "proto3";
+package quant;
+
+service QuantService {
+    rpc CalculatePortfolio (PortfolioRequest) returns (PortfolioResponse);
+}
+
+message PortfolioRequest {
+    double budget = 1;
+    repeated string symbols = 2;
+}
+
+message PortfolioItem {
+    string ticker = 1;
+    double price = 2;
+    int32 shares_to_buy = 3;
+    double allocated_investment = 4;
+}
+
+message PortfolioResponse {
+    double total_budget = 1;
+    string market_data_source = 2;
+    repeated PortfolioItem portfolio = 3;
+}

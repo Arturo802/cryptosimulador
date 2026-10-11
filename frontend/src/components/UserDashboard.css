@@ -1,0 +1,360 @@
+body {
+    background-color: #0b0f19;
+    color: #e5e7eb;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.dashboard-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    border: 1px solid #1f2937;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+    background-color: #111827;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #1f2937;
+    padding-bottom: 15px;
+}
+
+.dashboard-header h2 {
+    color: #f9fafb;
+    margin: 0;
+}
+
+.logout-btn {
+    padding: 8px 14px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}
+
+.stats-section {
+    margin-bottom: 25px;
+    background-color: #1f2937;
+    padding: 15px 20px;
+    border-radius: 6px;
+    border-left: 4px solid #28a745;
+}
+
+.stats-section h3 {
+    margin-top: 0;
+    color: #f3f4f6;
+}
+
+.stats-section p {
+    color: #9ca3af;
+    margin-bottom: 0;
+}
+
+/* Pestañas de navegación */
+.nav-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #1f2937;
+    padding-bottom: 10px;
+}
+
+.tab-nav-btn {
+    padding: 8px 16px;
+    background-color: #1f2937;
+    color: #d1d5db;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.tab-nav-btn:hover {
+    background-color: #374151;
+    color: #ffffff;
+}
+
+.active-history,
+.active-quant,
+.active-tab {
+    background-color: #28a745 !important;
+    color: white !important;
+    border-color: #28a745 !important;
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+}
+
+/* Formularios y Secciones */
+.trading-form-section, .quant-section, .admin-section {
+    background-color: #1f2937;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid #374151;
+}
+
+.trading-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    align-items: end;
+}
+
+.quant-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    gap: 15px;
+    align-items: end;
+    margin-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #d1d5db;
+}
+
+.form-input-control {
+    width: 100%;
+    padding: 9px;
+    border-radius: 6px;
+    border: 1px solid #4b5563;
+    background-color: #111827;
+    color: #ffffff;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.form-input-control:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2);
+}
+
+.submit-order-btn, .quant-submit-btn {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+
+.submit-order-btn:hover, .quant-submit-btn:hover {
+    background-color: #218838;
+}
+
+.form-error-msg {
+    color: #f87171;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.quant-title, .admin-title {
+    margin-top: 0;
+    color: #34d399;
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.quant-desc, .admin-desc {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 20px;
+}
+
+.quant-result-box {
+    background: #111827;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    margin-top: 15px;
+}
+
+.quant-result-box h5 {
+    margin-top: 0;
+    color: #f3f4f6;
+    margin-bottom: 10px;
+}
+
+/* Transacciones y Tablas */
+.transactions-section h4 {
+    color: #f3f4f6;
+    margin-bottom: 15px;
+}
+
+.loading-text, .empty-text {
+    color: #9ca3af;
+    font-style: italic;
+}
+
+.error-text {
+    color: #fca5a5;
+    background-color: #7f1d1d;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #991b1b;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.transactions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.transactions-table th {
+    background-color: #111827;
+    color: #f3f4f6;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 2px solid #374151;
+}
+
+.transactions-table td {
+    padding: 12px;
+    border-bottom: 1px solid #374151;
+    color: #d1d5db;
+}
+
+.tx-type {
+    font-weight: bold;
+}
+
+.type-compra {
+    color: #34d399;
+}
+
+.type-venta {
+    color: #f87171;
+}
+
+/* Sección DApp */
+.dapp-card-group {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.dapp-card-box {
+    background-color: #111827;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+}
+
+.dapp-card-title {
+    margin-bottom: 10px;
+    color: #f3f4f6;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.dapp-card-desc {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+.dapp-success-alert {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: #064e3b;
+    border: 1px solid #059669;
+    border-radius: 6px;
+    color: #a7f3d0;
+    font-size: 14px;
+}
+
+/* Panel de Administración (Blacklist) */
+.badge-active {
+    background-color: #064e3b;
+    color: #34d399;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge-blocked {
+    background-color: #7f1d1d;
+    color: #fca5a5;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.action-btn-block {
+    background-color: #ef4444;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.action-btn-block:hover {
+    background-color: #dc2626;
+}
+
+.action-btn-unblock {
+    background-color: #10b981;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.action-btn-unblock:hover {
+    background-color: #059669;
+}
+
+/* Corrección de color de texto para inputs con fondo claro (como el login) */
+input.form-input-control, 
+input[type="text"], 
+input[type="email"], 
+input[type="password"], 
+select.form-input-control {
+    color: #1f2937 !important; /* Texto oscuro y bien legible */
+    background-color: #ffffff; /* Fondo blanco para los campos de texto */
+}
+
+/* Color para el texto de ayuda (placeholder) en los inputs */
+input::placeholder {
+    color: #9ca3af !important;
+}
