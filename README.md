@@ -63,6 +63,7 @@ Bash
 cd frontend
 npm install
 npm run dev
+
 🧪 Ejecución de Pruebas Automatizadas
 Tests del Backend (Go):
 
@@ -76,8 +77,8 @@ cd python-bot
 pytest -v
 
 
-📄 Licencia
-Este proyecto se distribuye bajo la licencia MIT. Diseñado como una solución integral de ingeniería de software avanzada, Web3 y cumplimiento FinTech.
+Diseñado como una solución integral de ingeniería de software avanzada, Web3 y cumplimiento FinTech.
 
+Por: Arturo Tovar -> Arturo802
 
 ---
