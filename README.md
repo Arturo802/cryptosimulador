@@ -1,4 +1,4 @@
-# 🚀 CryptoSimulador DApp — Plataforma Web3, FinTech & Compliance con Sentinel-AI
+#  CryptoSimulador DApp — Plataforma Web3, FinTech & Compliance con Sentinel-AI
 
 Plataforma descentralizada y simulador financiero avanzado de alto rendimiento con arquitectura de microservicios y observabilidad de nivel empresarial. Combina un frontend moderno en **React + TypeScript**, un backend robusto en **Go (Gin + GORM)** sobre **PostgreSQL**, comunicación de ultra-baja latencia mediante **gRPC (HTTP/2)** con un microservicio de análisis cuantitativo e Inteligencia Artificial en **Python**, contratos inteligentes en **Solidity**, y un stack completo de monitoreo con **Prometheus y Grafana**.
 
@@ -47,6 +47,7 @@ python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 python grpc_server.py
+
 4. Levantar el Backend en Go
 En otra terminal:
 
@@ -54,6 +55,7 @@ Bash
 cd backend
 go mod tidy
 go run main.go
+
 5. Levantar el Frontend (React)
 En otra terminal:
 
